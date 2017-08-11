@@ -9,6 +9,7 @@ Features:
 
 Bugfixes:
  * Parser: Enforce commas between array and tuple elements.
+ * Type Checker: Reject the creation of interface contracts using the ``new`` statement.
 
 ### 0.4.15 (2017-08-08)
 
