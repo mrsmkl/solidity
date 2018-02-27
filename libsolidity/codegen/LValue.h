@@ -168,6 +168,8 @@ public:
 		SourceLocation const& _location = SourceLocation(),
 		bool _removeReference = true
 	) const override;
+    
+    // static FixedBytesType byteType(1);
 };
 
 /**

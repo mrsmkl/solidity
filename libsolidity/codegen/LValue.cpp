@@ -418,10 +418,11 @@ void StorageItem::setToZero(SourceLocation const&, bool _removeReference) const
 }
 
 /// Used in StorageByteArrayElement
-static FixedBytesType byteType(1);
+// static FixedBytesType StorageByteArrayElement::byteType(1);
 
 StorageByteArrayElement::StorageByteArrayElement(CompilerContext& _compilerContext):
-	LValue(_compilerContext, &byteType)
+// 	LValue(_compilerContext, &StorageByteArrayElement::byteType)
+	LValue(_compilerContext, new FixedBytesType(1))
 {
 }
 
