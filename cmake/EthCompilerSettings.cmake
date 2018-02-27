@@ -42,6 +42,8 @@ if (("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MA
 	#
 	# TODO - Track down what breaks if we do NOT do this.
 	add_compile_options(-Wno-unknown-pragmas)
+	add_compile_options(-Wno-delete-non-virtual-dtor)
+	add_compile_options(-Wno-vexing-parse)
 
 	# To get the code building on FreeBSD and Arch Linux we seem to need the following
 	# warning suppression to work around some issues in Boost headers.

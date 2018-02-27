@@ -30,10 +30,10 @@
 set -ev
 
 echo -en 'travis_fold:start:installing_dependencies\\r'
-test -e boost_1_57_0 -a -e boost_1_57_0/boost || (
-wget 'https://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.gz/download'\
+test -e boost_1_66_0 -a -e boost_1_66_0/boost || (
+wget 'https://sourceforge.net/projects/boost/files/boost/1.66.0/boost_1_66_0.tar.gz/download'\
  -O - | tar xz
-cd boost_1_57_0
+cd boost_1_66_0
 ./bootstrap.sh --with-toolset=gcc --with-libraries=thread,system,regex,date_time,chrono,filesystem,program_options,random
 )
 cd ..
